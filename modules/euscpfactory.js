@@ -972,7 +972,7 @@ class EUSignCPFactory {
         if (isInternalSign) {
           sign = euSign.SignDataInternal(isAddCert, data, true);
         } else {
-          if ((signAlg = "hash")) {
+          if ((signAlg == "hash")) {
             var hash = euSign.HashData(data);
             sign = euSign.SignHash(hash, true);
           } else {
